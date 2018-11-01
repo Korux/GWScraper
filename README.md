@@ -1,1 +1,3 @@
 # GWScraper
+
+Scrape gw info.
