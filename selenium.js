@@ -13,9 +13,13 @@ let driver = new webdriver.Builder()
 
 driver.get("http://game.granbluefantasy.jp/#mypage");
 
-const button = driver.wait(webdriver.until.elementLocated(By.id('mobage-login')), 20000).then(element => {
-    return driver.wait(webdriver.until.elementIsVisible(element),20000);
-});
+driver.get("http://game.granbluefantasy.jp/#event/treasureraid074").then(()=>{
+    driver.findElements(By.className("jssdk")).then((result)=>{
+        console.log(result);
+    });
+});;
+
+
 
 
 
